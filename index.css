@@ -87,42 +87,27 @@ header {
     border-radius: 20px; /* Optional for rounded corners */
   }
     
-    @keyframes glow {
+@keyframes glow {
     0% {
-        box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 40px #ffdf00;
+            box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 40px #ffdf00;
     }
     50% {
-        box-shadow: 0 0 20px #ffdf00, 0 0 60px #ffdf00, 0 0 120px #ffdf00;
+         box-shadow: 0 0 20px #ffdf00, 0 0 60px #ffdf00, 0 0 120px #ffdf00;
     }
     100% {
-        box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 40px #ffdf00;
+           box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 40px #ffdf00;
     }
     }
-.hero {
-    text-align: center;
-  }
+.horizontal-container{
+    display:inline-flex;
+
+
+}
+
+.education{
+    background-image: linear-gradient(to top, #0f3f88, #153277, #162666, #151a56, #120f46);
+    height: 500px;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 40%) ;
+    z-index: 15;
+}
   
-  h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 0px;
-  }
-  
-  p {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-  
-  .btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
