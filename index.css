@@ -59,9 +59,10 @@ header {
     border-right: 3px solid black; /* Creates the cursor effect */
     font-size: 2rem;
     animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
+    animation-play-state: paused; /* Pause animation initially */
   }
 
-  p{
+  .name p{
     margin-top: 0px;
     color: red;
   }
@@ -122,4 +123,143 @@ header {
     mask-image: linear-gradient(rgba(0, 0, 0, 1) 40%) ;
     z-index: 15;
 }
+
+.education_title{
+  color: #f0f0f0;
+  margin-left: 35px;
+  animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
+  animation-play-state: paused; /* Pause animation initially */
+}
+.education_body{  
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-self: center;
+
+}
+.education_1{
   
+  position: relative;
+  background: linear-gradient(90deg, rgba(104,104,185,0.891281512605042) 0%, rgba(84,64,218,1) 15%, rgba(50,54,200,1) 26%, rgba(23,49,162,1) 49%, rgba(42,21,162,0.9837184873949579) 100%);
+  
+  width: 400px;
+  margin-top: 30px;;
+  margin-left: 100px;
+  margin-bottom: 100pX;
+  text-align: center;
+  border-radius: 15px;
+  height: 300PX;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  
+}
+.education_1:hover{
+  transform: rotateY(180deg);
+}
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  
+  border-radius: 10px;
+}
+
+.front {
+  
+  justify-content: center;
+  align-items: center;
+  background: rgba(203, 166, 166, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blurring the background */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Optional border for aesthetics */
+}
+
+.back {
+  position: absolute;
+  transform: rotateY(180deg);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+
+}
+
+.circle-image img{
+  
+  height:200px;
+  width:500px;
+}
+
+.bdu-title {
+  margin:0px;
+
+}
+
+.description-box{
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Stack items vertically */
+ 
+  
+  align-items: start;
+
+  /*justify-content: center; */ 
+ 
+  background-color: #120f46;
+
+}
+.description-box p{
+
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: large;
+
+}
+
+.golden-text {
+  color: rgb(255, 215, 0);
+  
+  font-size: 15;
+  letter-spacing: .15ch;
+  line-height: 1.5;
+
+}
+
+/*styling for  the title*/
+@layer demo {
+  .highlighted-text-shadow {
+    
+    text-shadow:
+      /* regular text-shadow */
+      0 .15ch 15px var(--shadow),
+      /* text-shadow highlight */
+      0 -2px 0 var(--highlight);
+  }
+}
+
+@layer demo.support {
+  :root {
+    --hue: 320; /* change me */
+    --bg: oklch(35% .3 var(--hue));
+    --text: oklch(85% .1 var(--hue));
+    --shadow: oklch(25% .2 var(--hue));
+    --highlight: oklch(98% .05 var(--hue));
+  }
+  
+}
+.bi-calendar{
+  color: #f0f0f0;
+  margin-top: 40px;
+  margin-left: 40px;
+  height: 20px;
+  width: 20px;
+  font-size: 30px;
+
+}
