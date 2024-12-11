@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 header {
     background-color: #333; /* Dark background color */
     color: #fff; /* White text color */
@@ -169,6 +172,8 @@ header {
 
 .front {
   
+  transform: rotateY(180deg);
+  
   justify-content: center;
   align-items: center;
   background: rgba(203, 166, 166, 0.3); /* Semi-transparent background */
@@ -178,8 +183,7 @@ header {
 
 .back {
   position: absolute;
-  transform: rotateY(180deg);
-  padding: 20px;
+  justify-content: center;
   border-radius: 10px;
   display: flex;
 
@@ -254,12 +258,53 @@ header {
   }
   
 }
+
+.duration{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 40px;
+  width: 150px;
+  align-items: center;
+  
+}
 .bi-calendar{
   color: #f0f0f0;
-  margin-top: 40px;
-  margin-left: 40px;
   height: 20px;
-  width: 20px;
+  width: 20px;  
   font-size: 30px;
+  margin-top: -10px;
+
+}
+.date_duration{
+  margin-top: 60px;
+  margin-left: 10px;
+  justify-self:start;
+
+  font-size: 20;
+  color: #fff;
+
+  
+}
+.study-field{
+  margin-left: 20px;
+  font-family: "Anton SC", sans-serif;
+  color: white; 
+  letter-spacing: 2px;
+  border: #fff;
+}
+.relevant{
+  margin-top: -50px;
+  margin-left: 50px;
+}
+
+.outline{
+  justify-self: center;
+  align-self: center;
+  border:  25px;
+  border-color:  rgb(252, 215, 5);
+  width: 92%;
+  height: 88%;
+  border-radius: 10px;
 
 }
