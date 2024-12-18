@@ -1,4 +1,5 @@
-  document.addEventListener('DOMContentLoaded', () => {
+/// the typing effect  of the header
+document.addEventListener('DOMContentLoaded', () => {
     const typingEffectElements = document.querySelectorAll('h1,.education_title'); // Select h1 and p elements with the class typing-effect
   
     const observer = new IntersectionObserver(
