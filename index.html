@@ -6,19 +6,148 @@
     <link rel="stylesheet" href="index.css">
 
 
-<body> <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>My Sidebar</h2>
-        <div class="spacer"></div>
-            <div class="sidebar-menu">
-                <a href="#home">Home</a>
-                <a href="#education">Education</a>
-                <a href="#Services">Experience</a>
-                <a href="#contact">Project</a>
-                <a href="#contact">Contact Me</a>
-            </div>
-      </div>
-    <section>
+    <body>
+<main>
+ 
+    <aside class="sidebar" data-sidebar>
+
+        <div class="sidebar-info">
+  
+          <figure class="avatar-box">
+            <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          </figure>
+  
+          <div class="info-content">
+            <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+  
+            <p class="title">Web developer</p>
+          </div>
+  
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+  
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+  
+        </div>
+  
+        <div class="sidebar-info_more">
+  
+          <div class="separator"></div>
+  
+          <ul class="contacts-list">
+  
+            <li class="contact-item">
+  
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+  
+                <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+              </div>
+  
+            </li>
+  
+            <li class="contact-item">
+  
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+  
+                <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+              </div>
+  
+            </li>
+  
+            <li class="contact-item">
+  
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+  
+                <time datetime="1982-06-23">June 23, 1982</time>
+              </div>
+  
+            </li>
+  
+            <li class="contact-item">
+  
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+  
+                <address>Sacramento, California, USA</address>
+              </div>
+  
+            </li>
+  
+          </ul>
+  
+          <div class="separator"></div>
+  
+          <ul class="social-list">
+  
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+  
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+  
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+      </aside>
+  
+    <!-- Sidebar -->
+   
+    <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">  
+            <h2>My Sidebar</h2>
+                    <div class="spacer">
+
+                    </div>
+                    <div class="sidebar-menu">
+                        <a href="#home">Home</a>
+                        <a href="#education">Education</a>
+                        <a href="#Services">Experience</a>
+                        <a href="#contact">Project</a>
+                        <a href="#contact">Contact Me</a>
+                    </div>
+        </div>
+      
+      </aside>
+   <!-- end of side bar starting the body section -->
+
+<div class="main-content">
+    
+
+    <!-- basic ingformation section-->
+      <section>
         <div id="home" class="home">
             <div class="content-container">
 
@@ -27,7 +156,7 @@
                 </div>
 
                 <div class="name">
-                    <h2>Fikiremariaym</h1>
+                    <h2>Fikiremariaym
                     <p> |softwere eningeer</p>
                 </div>
 
@@ -46,6 +175,10 @@
         </div >
     </section>
     
+
+
+
+    <!-- education section-->
     <section id="education" class = "education">
     
         <div class="content-container education1 ">
@@ -141,13 +274,14 @@
 
     </section>
 
-
+    <!-- services section -->
     <section id="Services ">
         <h2>About Me</h2>
         <p>A paragraph about yourself, your skills, and your experience.</p>
         <img src="your-profile-pic.jpg" alt="Your Profile Picture">
     </section>
 
+    <!-- projects section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-container">
@@ -159,8 +293,12 @@
             </div>
     </section>
 
+    <!-- blogs section -->
+
+
+    <!-- contact section -->
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Contact social media links </h2>
         <form>
             </form>
         <p>Or connect with me on social media:</p>
@@ -171,12 +309,9 @@
         </ul>
     </section>
 
-    <footer>
-        <p>&copy; Your Name 2023</p>        
-        <h1 class ="education_title ">Education  </h1> 
+</div>
 
-
-    </footer>
+</main>
 </body>
 <script src="index.js"></script>
 </html>

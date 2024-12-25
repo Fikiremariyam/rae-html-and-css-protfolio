@@ -3,14 +3,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 
 
-body{
-  position: absolute;
-  height: 100%;
-  width: 98%;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-left: 90px;
+:root { /* the root file indicates the  root of the html dom in this case html*/
+
+  /**
+  this are just a varibles to store the values of the css in a varible 
+  they dont take effect unless called up on 
+   * colors
+   */
+
+  /* gradient */
+
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(240, 1%, 25%) 3%, 
+    hsl(0, 0%, 19%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsla(240, 1%, 18%, 0.251) 0%, 
+    hsla(240, 2%, 11%, 0) 100%
+  ), hsl(240, 2%, 13%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right, 
+    hsl(45, 100%, 71%) 0%, 
+    hsla(36, 100%, 69%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg, 
+    hsla(45, 100%, 71%, 0.251) 0%, 
+    hsla(35, 100%, 68%, 0) 59.86%
+  ), hsl(240, 2%, 13%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right, 
+    hsl(45, 100%, 72%), 
+    hsl(35, 100%, 68%)
+  );
+
+  /* solid */
+
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --vegas-gold: hsl(45, 54%, 58%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
+
+  /**
+   * typography
+   */
+
+  /* font-family */
+  --ff-poppins: 'Poppins', sans-serif;
+
+  /* font-size */
+  --fs-1: 24px;
+  --fs-2: 18px;
+  --fs-3: 17px;
+  --fs-4: 16px;
+  --fs-5: 15px;
+  --fs-6: 14px;
+  --fs-7: 13px;
+  --fs-8: 11px;
+
+  /* font-weight */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+
+  /**
+   * shadow
+   */
+  
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease-in-out;
+
 }
+
+::selection {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+}
+
+
+:focus { outline-color: var(--orange-yellow-crayola); }
+
 section {
     background-color: #333; /* Dark background color */
     color: #fff; /* White text color */
@@ -18,30 +116,173 @@ section {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     height: 400px;
 }
-.content-container{
-  margin-left: 90px;
-  scroll-margin-left:100px;
 
+
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
 }
+
+.main-content {
+  min-width: 75%;
+  width: 75%;
+  margin: 0;
+}
+
+
+
+  
+.sidebar, article {
+  width: 520px;
+  margin-inline: auto;
+  padding: 30px;
+} 
+
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: var(--jet);
+  margin: 16px 0;
+}
+
+.icon-box {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: var(--orange-yellow-crayola);
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+}
+
+.icon-box::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.icon-box ion-icon { --ionicon-stroke-width: 35px; }
+
+article { display: none; }
+
+article.active {
+  display: block;
+  animation: fade 0.5s ease backwards;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.h2,
+.h3,
+.h4,
+.h5 {
+  color: var(--white-2);
+  text-transform: capitalize;
+}
+
+.h2 { font-size: var(--fs-1); }
+
+.h3 { font-size: var(--fs-2); }
+
+.h4 { font-size: var(--fs-4); }
+
+.h5 {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+}
+
+
+.has-scrollbar::-webkit-scrollbar {
+  width: 5px; /* for vertical scrollbar */
+  height: 5px; /* for horizontal scrollbar */
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: var(--onyx);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--orange-yellow-crayola);
+  border-radius: 5px;
+}
+
+
 .sidebar {
-  width: 100px; /* Sidebar width */
+  position: sticky;
+  top: 60px;
+  max-height: max-content;
+  height: 100%;
+  margin-bottom: 0;
+  padding-top: 60px;
+  z-index: 1;
+
   height: 95vh; /* Full height */
   background-color: #2c3e50; /* Dark background color */
   color: #ecf0f1; /* Light text color */
-  position: fixed; /* Fixed position on the left */
-  display:block;
-
   flex-direction: column;  /* Aligns items vertically */
- 
-  left: 0;
-  top: 0;
-  overflow-y: auto; /* Scrollable if content overflows */
-  padding: 20px 0;
-  border-radius: 0px 10px 10px 10px;
-  margin-right: 5px;
-  z-index: 15;
+  border-radius: 10px 10px 10px 10px;
+
 
 } 
+
+
+.sidebar-info { flex-direction: column; }
+
+.avatar-box img { width: 150px; }
+
+.info-content .name {
+  white-space: nowrap;
+  text-align: center;
+}
+
+.info-content .title { margin: auto; }
+
+.info_more-btn { display: none; }
+
+.sidebar-info_more {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contacts-list { grid-template-columns: 1fr; }
+
+.contact-info :is(.contact-link) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-info :is(.contact-link, time, address) {
+  --fs-7: 14px;
+  font-weight: var(--fw-300);
+}
+
+.separator:last-of-type {
+  margin: 15px 0;
+  opacity: 0;
+}
+
+.social-list { justify-content: center; }
+
+
+
 .spacer {
   align-self: flex-start;
   justify-self: flex-start;
@@ -49,18 +290,6 @@ section {
 
 }
 
-.sidebar h2 {
-  margin-bottom: 20px;
-}.sidebar a {
-  display: block; /* Make links take full width */
-  color: #ecf0f1;
-  text-decoration: none;
-  padding: 10px 20px;
-  transition: background 0.3s ease;
-  z-index: 15;
-}.sidebar a:hover {
-  background-color: #34495e; /* Hover effect */
-}
 
 
 .prfilepic{
