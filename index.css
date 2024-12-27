@@ -333,8 +333,10 @@ article.active {
   margin-top: 10px;
 }
 .contact-item:hover .contact-title{
+  cursor: pointer;
   
   font-size: 14px;
+  
 }
 
 .contacts-list {
@@ -377,6 +379,8 @@ article.active {
   font-size: var(--fs-8);
   text-transform: uppercase;
   margin-bottom: 2px;
+  transition: font-size 0.5s ease , color 0.5s ease;
+
 }
 .contact-title.active{
   color: #ecf0f1; 
