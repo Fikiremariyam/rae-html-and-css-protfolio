@@ -18,4 +18,40 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(element); // Observe each h1 or p element
     });
   });
+
+  const navigationLinks = document.querySelectorAll(".contact-title");
+  const iconBox=document.querySelectorAll(".icon-box");
+  const pages=document.querySelectorAll("[data-page]");  
   
+
+  window.onload = function(){
+    console.log(navigationLinks);
+  console.log(pages);
+  console.log(iconBox)
+  }
+  
+  
+  for (let i = 0;i < navigationLinks.length; i++){
+
+    navigationLinks[i].addEventListener( "click" ,function(){
+
+
+      for (let i =0; i< pages.length;i++){
+        if (this.innerHTML.toLowerCase() == pages[i].dataset.page){
+          pages[i].classList.add("active");
+          navigationLinks[i].classList.add("active");
+          iconBox[i].classList.add("active");
+          window.scrollTo(0,0);
+        } else{
+          
+          pages[i].classList.remove("active");
+          navigationLinks[i].classList.remove("active");
+          iconBox[i].classList.remove("active");
+
+        }
+      }
+   
+
+
+    })
+  }
