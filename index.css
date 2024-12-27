@@ -120,7 +120,9 @@ section {
     color: #fff; /* White text color */
     padding: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    height: 400px;
+    height: max-content;
+    border-radius: 15px;
+    
 }
 
 
@@ -146,7 +148,7 @@ main {
 
   
 .sidebar, article {
-  width: 520px;
+  
   margin-inline: auto;
   padding: 30px;
 } 
@@ -421,11 +423,14 @@ article.active {
 
 /*main body */
 
-article { display: none; }
+article { 
+  display: none; 
+}
 
 article.active {
   display: block;
   animation: fade 0.5s ease backwards;
+ 
 }
 
 
@@ -445,12 +450,11 @@ article.active {
   
 }
 #home {
-  background-image: url('C:\Users\woldu\OneDrive\Desktop\portfolio using html and css only\profile.jpg'); /* Replace with your desired background image */
+  
   background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
-  
   color: #fff; /* White text color for better visibility on dark backgrounds */
 }
 
@@ -486,14 +490,18 @@ article.active {
 .discription { 
   margin-top: 25px;
     text-align: justify;
-    width: 600px;
-    height: 200px;
-    border: 10px solid #ffdf00;
+    
+    padding:25px;
+    border: 15px solid #ffdf00;
     border-radius: 10px; 
-    box-shadow: 0 0 20px #ffdf00, 0 0 40px #ffdf00, 0 0 80px #ffdf00;
     
     animation: glow 2s infinite ease-in-out;
+    max-height: max-content;
+
     }
+  .education-background{
+    margin: 15px;
+  }
   
     
 @keyframes glow {
@@ -515,7 +523,7 @@ article.active {
 .education{
   background-color: #333; /* Dark background color */
   mask-image: radial-gradient(circle, rgba(8, 7, 7, 0.922) 6%, rgb(0, 0, 0) 80%);    
-  height: 500px;
+  
 }
 
 
@@ -538,7 +546,6 @@ article.active {
   position: relative;
   background: linear-gradient(90deg, rgba(104,104,185,0.891281512605042) 0%, rgba(84,64,218,1) 15%, rgba(50,54,200,1) 26%, rgba(23,49,162,1) 49%, rgba(42,21,162,0.9837184873949579) 100%);
   
-  width: 400px;
   margin-top: 30px;
   margin-bottom: 100pX;
   text-align: center;
