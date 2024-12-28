@@ -139,19 +139,12 @@ main {
 }
 
 .main-content {
-  min-width: 75%;
-  width: 75%;
+  min-width: 80%;
+ 
   margin: 0;
+  margin-top: -10px;
 }
 
-
-
-  
-.sidebar, article {
-  
-  margin-inline: auto;
-  padding: 30px;
-} 
 
 
 .separator {
@@ -187,12 +180,7 @@ main {
 
 .icon-box ion-icon { --ionicon-stroke-width: 35px; }
 
-article { display: none; }
 
-article.active {
-  display: block;
-  animation: fade 0.5s ease backwards;
-}
 
 @keyframes fade {
   0% { opacity: 0; }
@@ -251,15 +239,14 @@ article.active {
   margin-bottom: 0;
 
   position: sticky;
-  top: 60px;
+  
   max-height: max-content;
 
   padding-top: 60px;
   color: #ecf0f1; /* Light text color */
   flex-direction: column;  /* Aligns items vertically */
-  
-
-
+  margin-top:-11px;
+  margin-left: 45px;
 } 
 
 
@@ -341,6 +328,13 @@ article.active {
   
 }
 
+.contact-item:hover .icon-box{
+  border-top-color: rgba(255, 255, 255, 0.8); /* White glow on top */
+  border-left-color: rgba(255, 255, 255, 0.8); /* White glow on left */
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5); /* Glow effect */
+  
+}
+
 .contacts-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -362,11 +356,7 @@ article.active {
   z-index: 1;
 }
 
-.icon-box:hover {
-  border-top-color: rgba(255, 255, 255, 0.8); /* White glow on top */
-  border-left-color: rgba(255, 255, 255, 0.8); /* White glow on left */
-  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5); /* Glow effect */
-}
+
 .icon-box.active{  
   border-top-color: rgba(255, 255, 255, 0.8); /* White glow on top */
   border-left-color: rgba(255, 255, 255, 0.8); /* White glow on left */
@@ -434,51 +424,47 @@ article.active {
 }
 
 
+/*ABOUT  me SECTION*/
 
-
-
-.prfilepic{
-  right:240px ; 
-  top:120px; position: absolute;
-  z-index: 8;  
-  float: right; 
-  height: 400px;
-            
-  mask-image: radial-gradient(circle, rgb(8, 7, 7) 0%, rgba(0, 0, 0, 0) 80%);    
-
-  
-  
+.hi_text{
+  font-size: 90px;
+  font-weight: 600;
+  margin: 0px;
 }
-#home {
+.intro_about{
+  padding: 1px;
+}
+.article-title{
+  font-size: 50px;
+  margin: -15px;
+  align-self: center;
   
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  color: #fff; /* White text color for better visibility on dark backgrounds */
+  margin-left: 10px;
 }
 
-  .typingEffect {
-    display: inline-block;
-    overflow: hidden; /* Ensures text stays within the box */
-    white-space: nowrap; /* Prevents text from wrapping */
-    border-right: 3px solid black; /* Creates the cursor effect */
-    font-size: 2rem;
-    animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
-    animation-play-state: paused; /* Pause animation initially */
-  }
+
+
+
+.typingEffect {
+  display: inline-block;
+  overflow: hidden; /* Ensures text stays within the box */
+  white-space: nowrap; /* Prevents text from wrapping */
+  border-right: 3px solid black; /* Creates the cursor effect */
+  font-size: 15px;
+  animation: typing 10s steps(45, end), blink 0.6s step-end infinite;
+  animation-play-state: paused; /* Pause animation initially */
+}
   
   .name p{ 
     margin-left: 20px;
     position:static;
     color: red;margin-left: 20px;
-  
     font-size: 25px;
   }
 
   @keyframes typing {
     from { width: 0; }
-    to { width: 10%; }
+    to { width: 30%; }
   }
 
 
@@ -488,15 +474,17 @@ article.active {
 
 
 .discription { 
-  margin-top: 25px;
+    margin-top: 25px;
     text-align: justify;
     
     padding:25px;
     border: 15px solid #ffdf00;
-    border-radius: 10px; 
+    border-radius: 40px; 
     
     animation: glow 2s infinite ease-in-out;
     max-height: max-content;
+    width: 50%;
+    margin-right: 0;
 
     }
   .education-background{
@@ -506,13 +494,13 @@ article.active {
     
 @keyframes glow {
     0% {
-            box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 40px #ffdf00;
+            box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 20px #ffdf00;
     }
     50% {
-         box-shadow: 0 0 20px #ffdf00, 0 0 60px #ffdf00, 0 0 120px #ffdf00;
+         box-shadow: 0 0 20px #ffdf00, 0 0 30px #ffdf00, 0 0 60px #ffdf00;
     }
     80% {
-           box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 40px #ffdf00;
+           box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 4cap #ffdf00;
     }
     }
 .horizontal-container{
@@ -612,9 +600,7 @@ article.active {
   flex-direction: column; /* Stack items vertically */
  
   
-  align-items: start;
-
-  /*justify-content: center; */ 
+  align-items: start; 
  
   background-color: #120f46;
 
@@ -843,4 +829,3 @@ article.active {
 
 
 
-7

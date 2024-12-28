@@ -1,6 +1,6 @@
 /// the typing effect  of the header
 document.addEventListener('DOMContentLoaded', () => {
-    const typingEffectElements = document.querySelectorAll('h1,.education_title'); // Select h1 and p elements with the class typing-effect
+    const typingEffectElements = document.querySelectorAll('h1,.education_title,.typingEffect'); // Select h1 and p elements with the class typing-effect
   
     const observer = new IntersectionObserver(
       (entries, observerInstance) => {
@@ -19,17 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+
+
+
+  // the navigation effect
   const navigationLinks = document.querySelectorAll(".contact-title");
   const iconBox=document.querySelectorAll(".icon-box");
   const pages=document.querySelectorAll("[data-page]");  
   
 
-  window.onload = function(){
-    console.log(navigationLinks);
-  console.log(pages);
-  console.log(iconBox)
-  }
-  
   
   for (let i = 0;i < navigationLinks.length; i++){
 
@@ -54,4 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     })
+    
+
+
   }
