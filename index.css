@@ -474,21 +474,25 @@ article.active {
 
 
 .discription { 
-    margin-top: 25px;
     text-align: justify;
-    
-    padding:25px;
+    padding: 15px;
     border: 15px solid #ffdf00;
     border-radius: 40px; 
     
-    animation: glow 2s infinite ease-in-out;
-    max-height: max-content;
-    width: 50%;
-    margin-right: 0;
+    animation: glow 3s infinite ease-in-out;
+    height: 140px;
+    width: 70%;
+    float: right;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center ;
 
     }
+
   .education-background{
     margin: 15px;
+    font-size: 13px;
+    
   }
   
     
@@ -505,6 +509,8 @@ article.active {
     }
 .horizontal-container{
     display:inline-flex;
+    align-items: flex-end;
+    justify-content: center ;
     
     
 }
@@ -698,29 +704,31 @@ ul{
 .education_title{
   color: #f0f0f0;
   margin-left: 35px;
+  font-size: 35px;
   animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
   animation-play-state: paused; /* Pause animation initially */
 }
-.education_body{  
-  margin-left: 100px;
-  align-items: center;
+.education_body{
+  padding: 40px ;
   display: flex;
-  gap: 50px;
-
+  gap: 65px;
+  flex-direction: row;
+  justify-content: center;
 }
+
 .education_1{
-  margin-left: 50px;
   
-  position: relative;
   background: linear-gradient(90deg, rgba(104,104,185,0.891281512605042) 0%, rgba(84,64,218,1) 15%, rgba(50,54,200,1) 26%, rgba(23,49,162,1) 49%, rgba(42,21,162,0.9837184873949579) 100%);
-  
+  height: 250px;
+  width: 300px;
   margin-top: 30px;
   margin-bottom: 100pX;
   text-align: center;
   border-radius: 15px;
-  height: 300PX;
+  
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 1.5s;
+  padding: 15px;
   
 }
 .education_1:hover{
@@ -729,7 +737,7 @@ ul{
 .front, .back {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position:fixed;
   backface-visibility: hidden;
   display: flex;
   
@@ -746,14 +754,28 @@ ul{
 }
 
 .back {
-  
+  position: relative;
   transform: rotateY(180deg);
-
-  position: absolute;
+  overflow: visible;
   justify-content: center;
   border-radius: 10px;
-  display: flex;
   
+
+}
+
+.outline{
+  flex-shrink: 0  ;
+  top: 15px;
+  left: 10px;
+
+  height: 300px;
+  width: 345px;
+
+  position:fixed;
+  border-radius: 10px;
+  background: rgba(53, 62, 79, 0.9); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blurring the background */
+ 
 
 }
 
@@ -825,15 +847,7 @@ ul{
   
 }
 
-.outline{
-  align-self: center;
-  width: 92%;
-  height: 88%;
-  border-radius: 10px;
-  border: 3px solid rgb(255, 226, 10);
-  display: inline-block;
-}
-
+  
 .horozontal{
   display: flex;
 }
@@ -845,7 +859,7 @@ ul{
   width: 150px;
   align-items: center;
   margin-top: -10px;
-  
+  margin-left:30px;
 }
 .bi-calendar{
   color: rgb(255, 226, 10);
@@ -858,7 +872,7 @@ ul{
 
   margin-left: 10px;
   margin-right: 25px;
-  justify-self:start;
+  bottom: 0;
   font-size: 20;
   color: rgb(255, 226, 10);
 
