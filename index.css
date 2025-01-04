@@ -824,6 +824,10 @@ ul{
 
 }
 
+
+
+
+
 /*styling for  the title*/
 @layer demo {
   .highlighted-text-shadow {
@@ -887,7 +891,16 @@ ul{
   border: #fff;
   transform: scaleY(1.5);
 }
-
+/*skills section */
+.skills-list{
+  display: flex;
+}
+.hexagon {
+  height: 100px; /* adjust to control the size  */
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+  background: #3B8686;
+}
 
 
 
