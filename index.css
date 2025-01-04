@@ -892,9 +892,15 @@ ul{
   transform: scaleY(1.5);
 }
 /*skills section */
+.skills{
+  display: flex;
+  display: grod;
+}
 .skills-list{
   display: flex;
+ 
 }
+
 .hexagon {
   height: 100px; /* adjust to control the size  */
   aspect-ratio: 1/cos(30deg);
