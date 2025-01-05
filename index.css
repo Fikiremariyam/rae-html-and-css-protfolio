@@ -894,18 +894,31 @@ ul{
 /*skills section */
 .skills{
   display: flex;
-  display: grod;
+  gap: 50px;
+  padding: 20px;
+  justify-content: center;
+
 }
 .skills-list{
   display: flex;
+  
  
 }
 
 .hexagon {
   height: 100px; /* adjust to control the size  */
+  width: 100px;
   aspect-ratio: 1/cos(30deg);
   clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
-  background: #3B8686;
+  background: linear-gradient(135deg, hsla(254, 84%, 50%, 1) 0%, hsla(245, 48%, 42%, 1) 50%, hsla(251, 65%, 51%, 1) 75%, hsla(198, 80%, 36%, 1) 100%);
+  
+}
+.hexagon img {
+  align-self: center;
+  height: auto;
+  width: 100%;
+  object-fit:fill;
+
 }
 
 
